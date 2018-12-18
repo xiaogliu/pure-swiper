@@ -1,0 +1,1 @@
+new PureSwiper().init();

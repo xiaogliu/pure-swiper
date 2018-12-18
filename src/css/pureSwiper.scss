@@ -1,0 +1,57 @@
+html,
+body {
+  padding: 0;
+  margin: 0; // 此处 body 作为全屏滚动的父级容器
+  overflow: hidden;
+}
+
+/* pure full swiper 样式 */
+
+#pureSwiper {
+  position: relative;
+  height: 300px;
+  transition: width 500ms;
+  overflow: hidden;
+  #swiperContainer {
+    position: absolute;
+    height: 300px;
+    display: flex;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    touch-action: none;
+    .page {
+      transition: width 500ms;
+      height: 300px;
+    }
+  }
+  .nav {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    display: flex;
+    transform: translateX(-50%);
+    p {
+      width: 20px;
+      height: 20px;
+      padding: 4px 8px;
+      margin: 0 auto;
+      cursor: pointer;
+      span {
+        display: block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 12px;
+        transition: all 150ms ease-in-out;
+      }
+      &.active span {
+        width: 8px;
+        height: 8px;
+        background-color: #fff;
+      }
+    }
+  }
+}
